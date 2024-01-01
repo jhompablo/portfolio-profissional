@@ -32,7 +32,6 @@ const animeText02 = () => {
     }
 }
 
-
 const menu = () => {
     let menuIcon = document.querySelector('#menu-icon')
     let navbar = document.querySelector('.navbar')
@@ -42,8 +41,6 @@ const menu = () => {
         navbar.classList.toggle('active')
     })
 }
-
-
 
 /** efeito do menu - active **/
 const scrollAnimate = () => {
@@ -79,7 +76,6 @@ const animeSkillsBar = () => {
     let numValue = document.querySelectorAll('.progress h3 span')
     let number = [90, 80, 90, 70, 60, 80, 65, 80, 70]
     let sum = 0
-
 
     if(window.scrollY >= top && window.scrollY < bottom){
         progressBar.forEach((item, n) => {
@@ -142,7 +138,6 @@ const validationEmail = () =>{
      }
 }
 
-
 /** usando api FormSubmit **/
 const emailJS = () =>{
     const url = document.forms[0].getAttribute('action')
@@ -163,12 +158,10 @@ const emailJS = () =>{
     })
 }
 
-
 const contactChange = () =>{
     const scroll = window.scrollY 
     const contactHeight = document.querySelector('.contact') 
     const elem = document.querySelectorAll('input[type=text]')
- 
     
     if((scroll+contactHeight.clientHeight) < contactHeight.offsetTop){
         document.querySelector('.nome').setAttribute('placeholder','nome')
@@ -190,12 +183,9 @@ const placeholderInput = () => {
     document.querySelector('.mensagem').setAttribute('placeholder', 'mensagem')
 }
 
-
-
 window.addEventListener('scroll', () => {scrollAnimate(), menuChange(), animeSkillsBar(), contactChange()})
 window.addEventListener('load', () => menu(), animeText01())
  
-
 document.forms[0].addEventListener('submit', ev => {
     const msgRetorno = document.querySelector('.retorno') 
     ev.preventDefault()
